@@ -1,92 +1,888 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" class="dark:bg-gray-900">
+  <head>
     <title>Page title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
-</head>
-<body class="antialiased bg-body text-body font-body">
-    <div class="">
-                
-      <nav class="py-8 bg-black" x-data="{ mobileNavOpen: false }">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="shuffle-for-tailwind.png"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body dark:bg-gray-900 dark:text-gray-100">
+      <nav class="py-8 bg-black dark:bg-gray-950" x-data="{ mobileNavOpen: false }">
         <div class="container px-4 mx-auto">
           <div class="flex justify-between items-center">
             <a class="text-gray-600 text-2xl leading-none" href="#">
-              <img class="h-8" src="mockup-assets/logos/shuffle-ux-light.svg" alt="" width="auto">
+              <img
+                class="h-8"
+                src="mockup-assets/logos/shuffle-ux-light.svg"
+                alt=""
+                width="auto"
+              />
             </a>
             <div class="lg:hidden">
-              <button x-on:click="mobileNavOpen = !mobileNavOpen" class="block text-gray-50 hover:text-gray-200 focus:outline-none">
-                <svg class="h-4 w-4" fill="currentColor " viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <button
+                x-on:click="mobileNavOpen = !mobileNavOpen"
+                class="block text-gray-50 hover:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  class="h-4 w-4"
+                  fill="currentColor "
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <title>Mobile menu</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </button>
             </div>
-            <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
-              <li><a class="text-sm text-gray-50 hover:text-gray-200" href="#">About</a></li>
-              <li><a class="text-sm text-gray-50 hover:text-gray-200" href="#">Company</a></li>
-              <li><a class="text-sm text-gray-50 hover:text-gray-200" href="#">Services</a></li>
-              <li><a class="text-sm text-gray-50 hover:text-gray-200" href="#">Testimonials</a></li>
+            <ul
+              class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12"
+            >
+              <li>
+                <a class="text-sm text-gray-50 hover:text-gray-200" href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="text-sm text-gray-50 hover:text-gray-200" href="#"
+                  >Company</a
+                >
+              </li>
+              <li>
+                <a class="text-sm text-gray-50 hover:text-gray-200" href="#"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="text-sm text-gray-50 hover:text-gray-200" href="#"
+                  >Testimonials</a
+                >
+              </li>
             </ul>
-            <a class="hidden lg:block px-6 py-3 text-sm text-gray-50 hover:text-gray-200 font-bold border border-gray-100 hover:border-gray-200 rounded" href="#">Sign Up</a>
+            <a
+              class="hidden lg:block px-6 py-3 text-sm text-gray-50 hover:text-gray-200 font-bold border border-gray-100 hover:border-gray-200 rounded"
+              href="#"
+              >Sign Up</a
+            >
           </div>
         </div>
-        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-          <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-25"></div>
-          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+        <div
+          :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}"
+          class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50"
+        >
+          <div
+            x-on:click="mobileNavOpen = !mobileNavOpen"
+            class="fixed inset-0 bg-gray-800 opacity-25"
+          ></div>
+          <nav
+            class="relative flex flex-col py-6 px-6 w-full h-full bg-white dark:bg-gray-800 border-r overflow-y-auto"
+          >
             <div class="flex items-center mb-8">
               <a class="mr-auto text-2xl font-semibold leading-none" href="#">
-                <img class="h-8" src="mockup-assets/logos/shuffle-ux.svg" alt="" width="auto">
+                <img
+                  class="h-8"
+                  src="mockup-assets/logos/shuffle-ux.svg"
+                  alt=""
+                  width="auto"
+                />
               </a>
               <button x-on:click="mobileNavOpen = !mobileNavOpen">
-                <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <svg
+                  class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
                 </svg>
               </button>
             </div>
             <div>
               <ul>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">About</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Company</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Services</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Testimonials</a></li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 rounded"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 rounded"
+                    href="#"
+                    >Company</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 rounded"
+                    href="#"
+                    >Services</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 rounded"
+                    href="#"
+                    >Testimonials</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="mt-auto">
-              <div class="pt-6"><a class="block px-6 py-2 mb-3 text-sm text-center text-gray-500 hover:text-gray-600 font-bold leading-loose border border-gray-100 hover:border-gray-200 rounded" href="#">Sign In</a><a class="block px-6 py-2 mb-2 text-sm text-center text-gray-500 hover:text-gray-600 font-bold leading-loose border border-gray-100 hover:border-gray-200 rounded" href="#">Sign Up</a></div>
-              <p class="mt-6 mb-4 text-sm text-center text-gray-400">
+              <div class="pt-6">
+                <a
+                  class="block px-6 py-2 mb-3 text-sm text-center text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 font-bold leading-loose border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-500 rounded"
+                  href="#"
+                  >Sign In</a
+                ><a
+                  class="block px-6 py-2 mb-2 text-sm text-center text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 font-bold leading-loose border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-500 rounded"
+                  href="#"
+                  >Sign Up</a
+                >
+              </div>
+              <p class="mt-6 mb-4 text-sm text-center text-gray-400 dark:text-gray-500">
                 <span>© 2021 All rights reserved.</span>
               </p>
             </div>
           </nav>
         </div>
       </nav>
-                
-      <section class="py-16">  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">    <!-- Text Content -->    <div class="flex-1 text-center md:text-left">      <h1 class="text-4xl font-extrabold leading-tight">        How to get        <span class="text-gray-700">{outcome}</span>        without        <span class="text-gray-700">{problem}</span>      </h1>      <p class="text-gray-600 mt-4">The only {product descriptor} for {target market} to help you {product benefit}.</p>      <ul class="mt-6 space-y-2 text-left">        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">Bullet point about feature</span>        </li>        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">Bullet point about benefit</span>        </li>        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">Bullet point about getting started</span>        </li>      </ul>      <div class="mt-6 flex justify-center md:justify-start space-x-4"><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">{Primary CTA}</a><a href="#" class="border border-black py-2 px-6 rounded hover:bg-gray-100">{Secondary CTA}</a></div>      <p class="mt-4 text-gray-500 italic">{Risk Reversal goes here}</p>    </div>    <!-- Image Placeholder -->    <div class="flex-1 mt-10 md:mt-0 md:ml-12">      <div class="w-full h-64 md:h-72 rounded-md flex items-center justify-center">        <img src="https://placehold.co/400x400" class="w-full mt-16 md:mt-4 h-auto p-8" alt="Image Placeholder">      </div>    </div>  </div></section>
-                
-      <section class="bg-white py-12">  <div class="container mx-auto text-center px-4">    <!-- Heading -->    <h2 class="text-xl font-semibold text-gray-800 mb-8">Don’t just take our word for it</h2>    <!-- Logos -->    <div class="flex flex-wrap justify-center items-center gap-8">      <img src="https://placehold.co/200x100" alt="Conversion Factory" class="h-12">      <img src="https://placehold.co/200x100" alt="Webflow" class="h-12">      <img src="https://placehold.co/200x100" alt="Conversion Factory" class="h-12">      <img src="https://placehold.co/200x100" alt="Webflow" class="h-12">    </div>  </div></section>
-                
-      <section class="bg-gray-50 py-16">  <div class="container mx-auto px-4">    <!-- Heading -->    <div class="text-center mb-12">      <h2 class="text-2xl font-bold text-gray-800">        There's a better way to        <span class="text-gray-700">{fix problem / get result}</span>      </h2>      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>    </div>    <!-- Comparison Cards -->    <div class="flex flex-col md:flex-row gap-8">      <!-- Old Way Card -->      <div class="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">        <div class="bg-gray-200 h-48 flex items-center justify-center">          <span class="text-gray-500">[Image Placeholder]</span>        </div>        <div class="p-6">          <h3 class="text-gray-800 font-semibold mb-2">Old Way</h3>          <h4 class="text-lg font-bold text-gray-800 mb-2">Medium length section heading goes here</h4>          <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>          <ul class="space-y-2">            <li class="flex items-center text-gray-600">              <span class="text-red-500 font-bold">✖</span>              <span class="ml-2">{Feature the old way does not have}</span>            </li>            <li class="flex items-center text-gray-600">              <span class="text-red-500 font-bold">✖</span>              <span class="ml-2">{Feature the old way does not have}</span>            </li>            <li class="flex items-center text-gray-600">              <span class="text-red-500 font-bold">✖</span>              <span class="ml-2">{Feature the old way does not have}</span>            </li>          </ul>        </div>      </div>      <!-- New Way Card -->      <div class="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">        <div class="bg-gray-200 h-48 flex items-center justify-center">          <span class="text-gray-500">[Image Placeholder]</span>        </div>        <div class="p-6">          <h3 class="text-gray-800 font-semibold mb-2">New Way</h3>          <h4 class="text-lg font-bold text-gray-800 mb-2">Medium length section heading goes here</h4>          <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>          <ul class="space-y-2">            <li class="flex items-center text-gray-600">              <span class="text-green-500 font-bold">✔</span>              <span class="ml-2">{Feature the new way has}</span>            </li>            <li class="flex items-center text-gray-600">              <span class="text-green-500 font-bold">✔</span>              <span class="ml-2">{Feature the new way has}</span>            </li>            <li class="flex items-center text-gray-600">              <span class="text-green-500 font-bold">✔</span>              <span class="ml-2">{Feature the new way has}</span>            </li>          </ul>        </div>      </div>    </div>  </div></section>
-                
-      <section class="bg-white py-16">  <div class="container mx-auto px-4">    <!-- Heading -->    <div class="text-center mb-12">      <h2 class="text-3xl font-bold text-gray-800">        Everything you need to        <span class="text-gray-700">{achieve a desired outcome}</span>      </h2>      <p class="text-gray-600 mt-2">But don’t take our word for it. We’ll let the product do the talking.</p>    </div>    <!-- Feature Grid -->    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">      <!-- Feature 1 -->      <div class="text-center">        <div class="text-4xl text-gray-800 mb-4">          🚀          <!-- Replace with SVG icon or image -->        </div>        <h3 class="text-lg font-bold text-gray-800">Feature 1</h3>        <p class="text-gray-600 mt-2">Explain what a feature enables your customers to do in plain English. Avoid industry jargon.</p>        <a href="#" class="text-blue-600 mt-2 inline-block">Learn More →</a>      </div>      <!-- Feature 2 -->      <div class="text-center">        <div class="text-4xl text-gray-800 mb-4">          💻          <!-- Replace with SVG icon or image -->        </div>        <h3 class="text-lg font-bold text-gray-800">Feature 2</h3>        <p class="text-gray-600 mt-2">Explain what a feature enables your customers to do in plain English. Avoid industry jargon.</p>        <a href="#" class="text-blue-600 mt-2 inline-block">Learn More →</a>      </div>      <!-- Feature 3 -->      <div class="text-center">        <div class="text-4xl text-gray-800 mb-4">          📢          <!-- Replace with SVG icon or image -->        </div>        <h3 class="text-lg font-bold text-gray-800">Feature 3</h3>        <p class="text-gray-600 mt-2">Explain what a feature enables your customers to do in plain English. Avoid industry jargon.</p>        <a href="#" class="text-blue-600 mt-2 inline-block">Learn More →</a>      </div>      <!-- Feature 4 -->      <div class="text-center">        <div class="text-4xl text-gray-800 mb-4">          ✨          <!-- Replace with SVG icon or image -->        </div>        <h3 class="text-lg font-bold text-gray-800">Feature 4</h3>        <p class="text-gray-600 mt-2">Explain what a feature enables your customers to do in plain English. Avoid industry jargon.</p>        <a href="#" class="text-blue-600 mt-2 inline-block">Learn More →</a>      </div>      <!-- Feature 5 -->      <div class="text-center">        <div class="text-4xl text-gray-800 mb-4">          ▲          <!-- Replace with SVG icon or image -->        </div>        <h3 class="text-lg font-bold text-gray-800">Feature 5</h3>        <p class="text-gray-600 mt-2">Explain what a feature enables your customers to do in plain English. Avoid industry jargon.</p>        <a href="#" class="text-blue-600 mt-2 inline-block">Learn More →</a>      </div>    </div>    <!-- Call-to-Action -->    <div class="text-center mt-12"><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800 mr-4">Get Started</a><a href="#" class="text-black border border-black py-2 px-6 rounded hover:bg-gray-100">All Features →</a></div>  </div></section>
-                
-      <section class="bg-gray-50 py-16">  <div class="container mx-auto px-4 text-center">    <!-- Heading and Description -->    <h2 class="text-3xl font-bold text-gray-800 mb-4">Direct integrations with your favorite tools</h2>    <p class="text-gray-600 mb-6">Describe what these integrations help your customers do and impressive facts about how they work.</p>    <!-- Image Placeholder -->    <div class="h-64 md:h-96 rounded flex items-center justify-center mt-12">      <img src="https://placehold.co/800x500" class="rounded " alt="Image Placeholder">    </div>    <!-- Call-to-Actions -->    <div class="flex justify-center space-x-4 mt-12 "><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">Get Started</a><a href="#" class="text-black border border-black py-2 px-6 rounded hover:bg-gray-100">See All Integrations →</a></div>  </div></section>
-                
-      <section class="bg-white py-16">  <div class="container mx-auto px-4">    <!-- Heading and Subheading -->    <div class="text-center mb-12">      <h2 class="text-3xl font-bold text-gray-800">        Get setup in        <span class="text-gray-700">{number}</span>        easy steps      </h2>      <p class="text-gray-600 mt-2">Summarize the setup process briefly in a way that makes it seem approachable and quick.</p>    </div>    <!-- Steps Grid -->    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">      <!-- Step 1 -->      <div class="text-center">        <div class="h-48 rounded-md flex items-center justify-center mt-4 mb-12 ">          <img src="https://placeholder.co/300x300" alt="image placeholder">        </div>        <h3 class="text-lg font-bold text-gray-800">{Step 1 Title}</h3>        <p class="text-gray-600 mt-2">The first thing they need to do to get the outcome they want.</p>      </div>      <!-- Step 2 -->      <div class="text-center">        <div class="h-48 rounded-md flex items-center justify-center mt-4 mb-12 ">          <img src="https://placeholder.co/300x300" alt="image placeholder">        </div>        <h3 class="text-lg font-bold text-gray-800 mt-4">{Step 2 Title}</h3>        <p class="text-gray-600 mt-2">The second thing they need to do to get the outcome they want.</p>      </div>      <!-- Step 3 -->      <div class="text-center">        <div class="h-48 rounded-md flex items-center justify-center mt-4 mb-12 ">          <img src="https://placeholder.co/300x300" alt="image placeholder">        </div>        <h3 class="text-lg font-bold text-gray-800 mt-4">{Step 3 Title}</h3>        <p class="text-gray-600 mt-2">The third thing they need to do to get the outcome they want.</p>      </div>    </div>    <!-- Call-to-Actions -->    <div class="flex justify-center space-x-4 mt-12 "><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">Get Started</a><a href="#" class="text-black border border-black py-2 px-6 rounded hover:bg-gray-100">See All Integrations →</a></div>  </div></section>
-                
-      <section class="bg-gray-50 py-16">  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">    <!-- Text Content -->    <div class="md:w-1/2 md:pr-8">      <h2 class="text-3xl font-bold text-gray-800">        Switch to        <span class="text-gray-700">{your product}</span>        in        <span class="text-gray-700">{time amount}</span>        or less      </h2>      <p class="text-gray-600 mt-4">You shouldn't have to {experience a painful problem}. With {your product}, you can finally {achieve a value outcome or get a big improvement}.</p>      <ul class="mt-6 space-y-2 text-left">        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">No credit card required</span>        </li>        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">Cancel any time</span>        </li>        <li class="flex items-center">          <span class="text-green-500 font-bold">✔</span>          <span class="ml-2">Live chat support</span>        </li>      </ul>      <div class="mt-6 flex space-x-4"><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">{Primary CTA}</a><a href="#" class="border border-black py-2 px-6 rounded hover:bg-gray-100">{Secondary CTA}</a></div>      <p class="mt-4 text-gray-500 italic">{Social Proof goes here}</p>    </div>    <!-- Image Placeholder -->    <div class="md:w-1/2 mt-8 md:mt-0">      <div class="h-64 md:h-80 rounded-md flex items-center justify-center">        <img src="https://placeholder.co/600x400" alt="image placeholder">      </div>    </div>  </div></section>
-                
-      <section class="bg-white py-16">  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">    <!-- Text Content -->    <div class="md:w-1/2 md:pr-8">      <h2 class="text-3xl font-bold text-gray-800">        We want you to        <span class="text-gray-700">{ability they couldn't do before}</span>      </h2>      <p class="text-gray-600 mt-4">        Hey, I’m        <span class="font-semibold">{your name}</span>        , the founder of        <span class="font-semibold">{your company}</span>        .      </p>      <p class="text-gray-600 mt-4">Write a few sentences introducing the problems you solve. You can even ask a rhetorical question to get people thinking about their own personal experiences with a problem they might have encountered.</p>      <p class="text-gray-600 mt-4">This is your chance to tell the backstory of why your product exists and explain the gap your product fills. Don’t be afraid to take a stance and plant your flag.</p>      <p class="text-gray-600 mt-4">        We believe that        <span class="font-semibold">{you should be able to X without Y}</span>        . We’ll help you:      </p>      <ul class="mt-4 space-y-2">        <li class="flex items-center">          <span class="text-gray-800 font-bold">→</span>          <span class="ml-2">Solve this problem</span>        </li>        <li class="flex items-center">          <span class="text-gray-800 font-bold">→</span>          <span class="ml-2">Solve another problem</span>        </li>        <li class="flex items-center">          <span class="text-gray-800 font-bold">→</span>          <span class="ml-2">Solve this other problem</span>        </li>      </ul>      <p class="text-gray-600 mt-4">If that resonates with you, you're in the right place.</p>      <p class="mt-4 text-gray-800 font-semibold">- {your name}</p>      <div class="mt-6 flex space-x-4"><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">Sign Up</a><a href="#" class="border border-black py-2 px-6 rounded hover:bg-gray-100">More about us →</a></div>    </div>    <!-- Image Placeholder -->    <!-- Image Placeholder -->    <div class="md:w-1/2 mt-16 md:mt-8">      <div class="h-64 md:h-80 rounded-md flex items-center justify-center">        <img src="https://placeholder.co/500x600" alt="image placeholder" class="hidden md:block">        <img src="https://placeholder.co/600x400" alt="image placeholder" class="block md:hidden">      </div>    </div>  </div></section>
-                
-      <section class="bg-white py-16">  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">    <!-- Text Content -->    <div class="md:w-1/2 md:pr-8">      <h2 class="text-3xl font-bold text-gray-800">        See        <span class="text-gray-700">{your product}</span>        in action      </h2>      <p class="text-gray-600 mt-4">        Click play to watch this        <span class="font-semibold">{time amount}</span>        demo.      </p>      <div class="mt-6 flex space-x-4"><a href="#" class="bg-black text-white py-2 px-6 rounded hover:bg-gray-800">Get Started</a><a href="#" class="border border-black py-2 px-6 rounded hover:bg-gray-100">Button →</a></div>    </div>    <!-- Video Placeholder -->    <div class="md:w-1/2 mt-8 md:mt-0">      <div class="bg-gray-800 h-64 md:h-80 rounded-md flex items-center justify-center">        <div class="text-white flex flex-col items-center">          <video src="https://www.youtube.com/watch?v=QHdU4HnseDw" alt=""></video>        </div>      </div>    </div>  </div></section>
-                
-      <footer class="bg-gray-50 py-12 border-t border-gray-200">  <div class="container mx-auto px-4">    <!-- Footer Grid -->    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">      <!-- Column 1: Site Pages -->      <div>        <div class="mb-4">          <img src="logo.svg" alt="Logo" class="h-8">        </div>        <h4 class="font-semibold text-gray-800">Site Pages</h4>        <ul class="mt-4 space-y-2 text-gray-600">          <li><a href="#" class="hover:text-gray-800">Features</a></li>          <li><a href="#" class="hover:text-gray-800">Integrations</a></li>          <li><a href="#" class="hover:text-gray-800">Pricing</a></li>          <li><a href="#" class="hover:text-gray-800">How it Works</a></li>          <li><a href="#" class="hover:text-gray-800">Contact</a></li>        </ul>      </div>      <!-- Column 2: Features -->      <div>        <h4 class="font-semibold text-gray-800">Features</h4>        <ul class="mt-4 space-y-2 text-gray-600">          <li><a href="#" class="hover:text-gray-800">Feature 1</a></li>          <li><a href="#" class="hover:text-gray-800">Feature 2</a></li>          <li><a href="#" class="hover:text-gray-800">Feature 3</a></li>          <li><a href="#" class="hover:text-gray-800">Feature 4</a></li>          <li><a href="#" class="hover:text-gray-800">Feature 5</a></li>          <li><a href="#" class="hover:text-gray-800">All Features</a></li>        </ul>      </div>      <!-- Column 3: Blog -->      <div>        <h4 class="font-semibold text-gray-800">Blog</h4>        <ul class="mt-4 space-y-2 text-gray-600">          <li><a href="#" class="hover:text-gray-800">8 Things That Prove Coding Skills...</a></li>          <li><a href="#" class="hover:text-gray-800">5 Ways to Guarantee Your Startup...</a></li>          <li><a href="#" class="hover:text-gray-800">10 Ideas That Will Guarantee...</a></li>          <li><a href="#" class="hover:text-gray-800">7 Keys to SaaS Success...</a></li>          <li><a href="#" class="hover:text-gray-800">This VC Morning Routine...</a></li>          <li><a href="#" class="hover:text-gray-800">All Articles</a></li>        </ul>      </div>      <!-- Column 4: Subscribe -->      <div>        <h4 class="font-semibold text-gray-800">Subscribe</h4>        <p class="text-gray-600 mt-2">Join our newsletter to stay up to date on features and releases.</p>        <form action="#" method="POST" class="mt-4 flex flex-col sm:flex-row">          <input type="email" placeholder="Enter your email" class="border border-gray-300 p-2 rounded-md flex-1 mb-2 sm:mb-0 sm:mr-2 focus:ring-2 focus:ring-gray-800">          <button type="submit" class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800">Subscribe</button>        </form>        <p class="text-gray-500 text-xs mt-2">By subscribing you agree to our <a href="#" class="hover:underline">Privacy Policy</a> and provide consent to receive updates.</p>      </div>    </div>    <!-- Bottom Section -->    <div class="mt-8 border-t border-gray-200 pt-4 flex flex-col lg:flex-row justify-between items-center">      <p class="text-gray-600 text-sm">© 2023 Conversion Factory. All rights reserved.</p>      <div class="mt-4 lg:mt-0 flex space-x-4"><a href="#" class="hover:text-gray-800">Privacy Policy</a><a href="#" class="hover:text-gray-800">Terms of Service</a><a href="#" class="hover:text-gray-800">Cookies Settings</a></div>      <div class="mt-4 lg:mt-0 flex space-x-4"><a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-facebook"></i></a><a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-instagram"></i></a><a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-twitter"></i></a><a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin"></i></a><a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-youtube"></i></a></div>    </div>  </div></footer>
-    </div>
-</body>
-</html>
 
+      <section class="py-16 dark:bg-gray-900">
+        <div
+          class="container mx-auto px-4 flex flex-col flex-wrap md:flex-row items-center"
+        >
+          <!-- Text Content -->
+          <div class=" text-center md:text-left basis-1/2">
+            <h1 class="text-5xl font-extrabold leading-tight dark:text-white">
+              How to get <span class="text-gray-700 dark:text-gray-300">{outcome}</span> without
+              <span class="text-gray-700 dark:text-gray-300">{problem}</span>
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              The only {product descriptor} for {target market} to help you
+              {product benefit}.
+            </p>
+            <div class="my-4 flex justify-center md:justify-start">
+            <ul class="mt-6 space-y-2 text-left">
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">Bullet point about feature</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">Bullet point about benefit</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">Bullet point about getting started</span>
+              </li>
+            </ul>
+          </div>
+            <div class="mt-6 flex justify-center md:justify-start space-x-4">
+              <a
+                href="#"
+                class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+                >{Primary CTA}</a
+              ><a
+                href="#"
+                class="border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
+                >{Secondary CTA}</a
+              >
+            </div>
+            <p class="mt-4 text-gray-500 italic">{Risk Reversal goes here}</p>
+          </div>
+          <!-- Image Placeholder -->
+          <div class="mt-10 md:mt-0 basis-1/2">
+            <div
+              class="w-full h-64 md:h-72 rounded-md flex items-center justify-center"
+            >
+              <img
+                src="https://placehold.co/400x400"
+                class="my-16 md:mt-4 h-auto p-8"
+                alt="Image Placeholder"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-800 py-12">
+        <div class="container mx-auto text-center px-4">
+          <!-- Heading -->
+          <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-8">
+            Don’t just take our word for it
+          </h2>
+          <!-- Logos -->
+          <div class="flex flex-wrap justify-center items-center gap-8">
+            <img
+              src="https://placehold.co/200x100"
+              alt="Conversion Factory"
+              class="h-12"
+            />
+            <img
+              src="https://placehold.co/200x100"
+              alt="Webflow"
+              class="h-12"
+            />
+            <img
+              src="https://placehold.co/200x100"
+              alt="Conversion Factory"
+              class="h-12"
+            />
+            <img
+              src="https://placehold.co/200x100"
+              alt="Webflow"
+              class="h-12"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-gray-900 py-16">
+        <div class="container mx-auto px-4">
+          <!-- Heading -->
+          <div class="text-center mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+              There's a better way to
+              <span class="text-gray-700 dark:text-gray-300">{fix problem / get result}</span>
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <!-- Comparison Cards -->
+          <div class="flex flex-col md:flex-row gap-8">
+            <!-- Old Way Card -->
+            <div class="flex-1 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+              <div class="bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center">
+                <span class="text-gray-500 dark:text-gray-300">[Image Placeholder]</span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-gray-800 dark:text-white font-semibold mb-2">Old Way</h3>
+                <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2">
+                  Medium length section heading goes here
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-red-500 font-bold">✖</span>
+                    <span class="ml-2"
+                      >{Feature the old way does not have}</span
+                    >
+                  </li>
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-red-500 font-bold">✖</span>
+                    <span class="ml-2"
+                      >{Feature the old way does not have}</span
+                    >
+                  </li>
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-red-500 font-bold">✖</span>
+                    <span class="ml-2"
+                      >{Feature the old way does not have}</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- New Way Card -->
+            <div class="flex-1 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+              <div class="bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center">
+                <span class="text-gray-500 dark:text-gray-300">[Image Placeholder]</span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-gray-800 dark:text-white font-semibold mb-2">New Way</h3>
+                <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2">
+                  Medium length section heading goes here
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-green-500 font-bold">✔</span>
+                    <span class="ml-2">{Feature the new way has}</span>
+                  </li>
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-green-500 font-bold">✔</span>
+                    <span class="ml-2">{Feature the new way has}</span>
+                  </li>
+                  <li class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="text-green-500 font-bold">✔</span>
+                    <span class="ml-2">{Feature the new way has}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+          <!-- Heading -->
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+              Everything you need to
+              <span class="text-gray-700 dark:text-gray-300">{achieve a desired outcome}</span>
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              But don’t take our word for it. We’ll let the product do the
+              talking.
+            </p>
+          </div>
+          <!-- Feature Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="text-center">
+              <div class="text-4xl text-gray-800 dark:text-white mb-4">
+                🚀
+                <!-- Replace with SVG icon or image -->
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Feature 1</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Explain what a feature enables your customers to do in plain
+                English. Avoid industry jargon.
+              </p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 mt-2 inline-block"
+                >Learn More →</a
+              >
+            </div>
+            <!-- Feature 2 -->
+            <div class="text-center">
+              <div class="text-4xl text-gray-800 dark:text-white mb-4">
+                💻
+                <!-- Replace with SVG icon or image -->
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Feature 2</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Explain what a feature enables your customers to do in plain
+                English. Avoid industry jargon.
+              </p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 mt-2 inline-block"
+                >Learn More →</a
+              >
+            </div>
+            <!-- Feature 3 -->
+            <div class="text-center">
+              <div class="text-4xl text-gray-800 dark:text-white mb-4">
+                📢
+                <!-- Replace with SVG icon or image -->
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Feature 3</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Explain what a feature enables your customers to do in plain
+                English. Avoid industry jargon.
+              </p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 mt-2 inline-block"
+                >Learn More →</a
+              >
+            </div>
+            <!-- Feature 4 -->
+            <div class="text-center">
+              <div class="text-4xl text-gray-800 dark:text-white mb-4">
+                ✨
+                <!-- Replace with SVG icon or image -->
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Feature 4</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Explain what a feature enables your customers to do in plain
+                English. Avoid industry jargon.
+              </p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 mt-2 inline-block"
+                >Learn More →</a
+              >
+            </div>
+            <!-- Feature 5 -->
+            <div class="text-center">
+              <div class="text-4xl text-gray-800 dark:text-white mb-4">
+                ▲
+                <!-- Replace with SVG icon or image -->
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Feature 5</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Explain what a feature enables your customers to do in plain
+                English. Avoid industry jargon.
+              </p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 mt-2 inline-block"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+          <!-- Call-to-Action -->
+          <div class="text-center mt-12">
+            <a
+              href="#"
+              class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100 mr-4"
+              >Get Started</a
+            ><a
+              href="#"
+              class="text-black dark:text-white border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+              >All Features →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-gray-900 py-16">
+        <div class="container mx-auto px-4 text-center">
+          <!-- Heading and Description -->
+          <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+            Direct integrations with your favorite tools
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Describe what these integrations help your customers do and
+            impressive facts about how they work.
+          </p>
+          <!-- Image Placeholder -->
+          <div
+            class="h-64 md:h-96 rounded flex items-center justify-center mt-12"
+          >
+            <img
+              src="https://placehold.co/800x500"
+              class="rounded"
+              alt="Image Placeholder"
+            />
+          </div>
+          <!-- Call-to-Actions -->
+          <div class="flex justify-center space-x-4 mt-12">
+            <a
+              href="#"
+              class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+              >Get Started</a
+            ><a
+              href="#"
+              class="text-black dark:text-white border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+              >See All Integrations →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+          <!-- Heading and Subheading -->
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+              Get setup in <span class="text-gray-700 dark:text-gray-300">{number}</span> easy
+              steps
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              Summarize the setup process briefly in a way that makes it seem
+              approachable and quick.
+            </p>
+          </div>
+          <!-- Steps Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="text-center grid grid-rows-3">
+              <div class="row-span-1">
+              <div
+                class="h-48 rounded-md flex items-center justify-center mt-4 mb-12"
+              >
+                <img
+                  src="https://placeholder.co/300x300"
+                  alt="image placeholder"
+                  class="inline"
+                />
+              </div>
+            </div>
+            <div class="row-span-1">
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">{Step 1 Title}</h3>
+            </div>
+            <div class="row-span-1">
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                The first thing they need to do to get the outcome they want.
+              </p>
+            </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="text-center">
+              <div
+                class="h-48 rounded-md flex items-center justify-center mt-4 mb-12"
+              >
+                <img
+                  src="https://placeholder.co/300x300"
+                  alt="image placeholder"
+                />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white mt-4">
+                {Step 2 Title}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                The second thing they need to do to get the outcome they want.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="text-center">
+              <div
+                class="h-48 rounded-md flex items-center justify-center mt-4 mb-12"
+              >
+                <img
+                  src="https://placeholder.co/300x300"
+                  alt="image placeholder"
+                />
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white mt-4">
+                {Step 3 Title}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                The third thing they need to do to get the outcome they want.
+              </p>
+            </div>
+          </div>
+          <!-- Call-to-Actions -->
+          <div class="flex justify-center space-x-4 mt-12">
+            <a
+              href="#"
+              class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+              >Get Started</a
+            ><a
+              href="#"
+              class="text-black dark:text-white border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+              >See All Integrations →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-gray-900 py-16">
+        <div
+          class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+        >
+          <!-- Text Content -->
+          <div class="md:w-1/2 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+              Switch to <span class="text-gray-700 dark:text-gray-300">{your product}</span> in
+              <span class="text-gray-700 dark:text-gray-300">{time amount}</span> or less
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              You shouldn't have to {experience a painful problem}. With {your
+              product}, you can finally {achieve a value outcome or get a big
+              improvement}.
+            </p>
+            <ul class="mt-6 space-y-2 text-left">
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">No credit card required</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">Cancel any time</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 font-bold">✔</span>
+                <span class="ml-2">Live chat support</span>
+              </li>
+            </ul>
+            <div class="mt-6 flex space-x-4">
+              <a
+                href="#"
+                class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+                >{Primary CTA}</a
+              ><a
+                href="#"
+                class="border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
+                >{Secondary CTA}</a
+              >
+            </div>
+            <p class="mt-4 text-gray-500 dark:text-gray-400 italic">{Social Proof goes here}</p>
+          </div>
+          <!-- Image Placeholder -->
+          <div class="md:w-1/2 mt-8 md:mt-0">
+            <div
+              class="h-64 md:h-80 rounded-md flex items-center justify-center"
+            >
+              <img
+                src="https://placeholder.co/600x400"
+                alt="image placeholder"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-800 py-16">
+        <div
+          class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+        >
+          <!-- Text Content -->
+          <div class="md:w-1/2 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+              We want you to
+              <span class="text-gray-700 dark:text-gray-300"
+                >{ability they couldn't do before}</span
+              >
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              Hey, I’m <span class="font-semibold">{your name}</span> , the
+              founder of <span class="font-semibold">{your company}</span> .
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              Write a few sentences introducing the problems you solve. You can
+              even ask a rhetorical question to get people thinking about their
+              own personal experiences with a problem they might have
+              encountered.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              This is your chance to tell the backstory of why your product
+              exists and explain the gap your product fills. Don’t be afraid to
+              take a stance and plant your flag.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              We believe that
+              <span class="font-semibold"
+                >{you should be able to X without Y}</span
+              >
+              . We’ll help you:
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center">
+                <span class="text-gray-800 dark:text-white font-bold">→</span>
+                <span class="ml-2">Solve this problem</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-gray-800 dark:text-white font-bold">→</span>
+                <span class="ml-2">Solve another problem</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-gray-800 dark:text-white font-bold">→</span>
+                <span class="ml-2">Solve this other problem</span>
+              </li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              If that resonates with you, you're in the right place.
+            </p>
+            <p class="mt-4 text-gray-800 dark:text-white font-semibold">- {your name}</p>
+            <div class="mt-6 flex space-x-4">
+              <a
+                href="#"
+                class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+                >Sign Up</a
+              ><a
+                href="#"
+                class="border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
+                >More about us →</a
+              >
+            </div>
+          </div>
+          <!-- Image Placeholder -->
+          <!-- Image Placeholder -->
+          <div class="md:w-1/2 mt-16 md:mt-8">
+            <div
+              class="h-64 md:h-80 rounded-md flex items-center justify-center"
+            >
+              <img
+                src="https://placeholder.co/500x600"
+                alt="image placeholder"
+                class="hidden md:block"
+              />
+              <img
+                src="https://placeholder.co/600x400"
+                alt="image placeholder"
+                class="block md:hidden"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-800 py-16">
+        <div
+          class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+        >
+          <!-- Text Content -->
+          <div class="md:w-1/2 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+              See <span class="text-gray-700 dark:text-gray-300">{your product}</span> in action
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-4">
+              Click play to watch this
+              <span class="font-semibold">{time amount}</span> demo.
+            </p>
+            <div class="mt-6 flex space-x-4">
+              <a
+                href="#"
+                class="bg-black text-white dark:bg-white dark:text-gray-900 py-2 px-6 rounded hover:bg-gray-800 dark:hover:bg-gray-100"
+                >Get Started</a
+              ><a
+                href="#"
+                class="border border-black dark:border-white py-2 px-6 rounded hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
+                >Button →</a
+              >
+            </div>
+          </div>
+          <!-- Video Placeholder -->
+          <div class="md:w-1/2 mt-8 md:mt-0">
+            <div
+              class="bg-gray-800 dark:bg-gray-700 h-64 md:h-80 rounded-md flex items-center justify-center"
+            >
+              <div class="text-white flex flex-col items-center">
+                <video
+                  src="https://www.youtube.com/watch?v=QHdU4HnseDw"
+                  alt=""
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-gray-50 dark:bg-gray-800 py-12 border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4">
+          <!-- Footer Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1: Site Pages -->
+            <div>
+              <div class="mb-4">
+                <img src="logo.svg" alt="Logo" class="h-8" />
+              </div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Site Pages</h4>
+              <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Features</a></li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white">Integrations</a>
+                </li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Pricing</a></li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white">How it Works</a>
+                </li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Column 2: Features -->
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Features</h4>
+              <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Feature 1</a></li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Feature 2</a></li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Feature 3</a></li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Feature 4</a></li>
+                <li><a href="#" class="hover:text-gray-800 dark:hover:text-white">Feature 5</a></li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white">All Features</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Column 3: Blog -->
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Blog</h4>
+              <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white"
+                    >8 Things That Prove Coding Skills...</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white"
+                    >5 Ways to Guarantee Your Startup...</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white"
+                    >10 Ideas That Will Guarantee...</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white"
+                    >7 Keys to SaaS Success...</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white"
+                    >This VC Morning Routine...</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-800 dark:hover:text-white">All Articles</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Column 4: Subscribe -->
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Subscribe</h4>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                Join our newsletter to stay up to date on features and releases.
+              </p>
+              <form
+                action="#"
+                method="POST"
+                class="mt-4 flex flex-col sm:flex-row"
+              >
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="border border-gray-300 dark:border-gray-700 p-2 rounded-md flex-1 mb-2 sm:mb-0 sm:mr-2 focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-500"
+                />
+                <button
+                  type="submit"
+                  class="bg-black text-white dark:bg-white dark:text-gray-900 px-4 py-2 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mt-2">
+                By subscribing you agree to our
+                <a href="#" class="hover:underline">Privacy Policy</a> and
+                provide consent to receive updates.
+              </p>
+            </div>
+          </div>
+          <!-- Bottom Section -->
+          <div
+            class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-4 flex flex-col lg:flex-row justify-between items-center"
+          >
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              © 2023 Conversion Factory. All rights reserved.
+            </p>
+            <div class="mt-4 lg:mt-0 flex space-x-4">
+              <a href="#" class="hover:text-gray-800 dark:hover:text-white">Privacy Policy</a
+              ><a href="#" class="hover:text-gray-800 dark:hover:text-white">Terms of Service</a
+              ><a href="#" class="hover:text-gray-800 dark:hover:text-white">Cookies Settings</a>
+            </div>
+            <div class="mt-4 lg:mt-0 flex space-x-4">
+              <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
+                ><i class="fab fa-facebook"></i></a
+              ><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
+                ><i class="fab fa-instagram"></i></a
+              ><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
+                ><i class="fab fa-twitter"></i></a
+              ><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
+                ><i class="fab fa-linkedin"></i></a
+              ><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
